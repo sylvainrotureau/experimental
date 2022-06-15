@@ -68,22 +68,27 @@ function launch1000Game() {
     let nbPaper = "";
     let nbScissors = "";
 
-    for (let i = 0; i < 1000000000; i++) {
+    for (let i = 0; i < 1000; i++) {
 
         let message = getWinner();
 
         // incrémentation des variables 
         if (player1 === "rock") {
             nbRock++;
-        } else if (player2 === "rock") {
+        }
+         if (player2 === "rock") {
             nbRock++;
-        } else if (player1 === "paper") {
+        }
+         if (player1 === "paper") {
             nbPaper++;
-        } else if (player2 === "paper") {
+        }
+         if (player2 === "paper") {
             nbPaper++;
-        } else if (player1 === "scissors") {
+        }
+         if (player1 === "scissors") {
             nbScissors++;
-        } else if (player2 === "scissors") {
+        }
+        if (player2 === "scissors") {
             nbScissors++;
         } 
 
@@ -96,6 +101,9 @@ function launch1000Game() {
             nbWinPlayer2++;
         }
     }
+
+    let totalGames = nbWinPlayer1 + nbWinPlayer2 + nbDraw;
+    let totalMoves = nbRock + nbPaper + nbScissors;
 
     let div1 = document.getElementById('nbWinPlayer1');
     div1.innerHTML = nbWinPlayer1;
@@ -114,6 +122,12 @@ function launch1000Game() {
 
     let div6 = document.getElementById('nbScissors');
     div6.innerHTML = nbScissors;
+
+    let div7 = document.getElementById('totalGames');
+    div7.innerHTML = totalGames;
+
+    let div8 = document.getElementById('totalMoves');
+    div8.innerHTML = totalMoves;
     return message;
 };
 
