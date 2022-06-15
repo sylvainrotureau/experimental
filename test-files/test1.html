@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../mainstyle.css">
-    <title>test 1</title>
+    <title>Rock Paper Scissors</title>
+
 </head>
 
 <body>
@@ -14,142 +15,30 @@
         <aside>
             <ul>
                 <li><a href="../index.html">Accueil</a></li>
-                <li><a href="./test1.html">test 1</a></li>
-                <li><a href="./test2.html">test 2</a></li>
+                <li><a href="./test1.html">Rock Paper Scissors</a></li>
+                <li><a href="./test2.html">Rock Paper Scissors x1000</a></li>
             </ul>
         </aside>
 
         <main>
             <div class="wrapper-inner">
-                <h1>Test 1</h1>
-                <p>Préciser la nature du test</p>
+                    <h1>Pierre Feuille ciseaux</h1>
 
+                    <h2>Idée de ce projet : </h2>
+                    <ul>
+                        <li>Avoir deux joueurs ordinateurs</li>
+                        <li>Chacun joue au jeu Rock paper scissors</li>
+                        <li>Le résultat est affiché</li>
+                    </ul>
 
-                Let’s take one more glance at the concepts we just learned:
-
-                <ul>
-                    <li>Data is printed, or logged, to the console, a panel that displays messages, with console.log().
-                    </li>
-                    <li>We can write single-line comments with // and multi-line comments between /* and */.</li>
-                    <li>There are 7 fundamental data types in JavaScript: strings, numbers, booleans, null, undefined,
-                        symbol, and object.</li>
-
-                    <li>Numbers are any number without quotes: 23.8879</li>
-                    <li>Strings are characters wrapped in single or double quotes: 'Sample String'</li>
-                    <li>The built-in arithmetic operators include +, -, *, /, and %.</li>
-                    <li>Objects, including instances of data types, can have properties, stored information. The
-                        properties are denoted with a . after the name of the object, for example: 'Hello'.length.</li>
-                    <li>Objects, including instances of data types, can have methods which perform actions. Methods are
-                        called by appending the object or instance with a period, the method name, and parentheses. For
-                        example: 'hello'.toUpperCase().</li>
-                    <li>We can access properties and methods by using the ., dot operator.
-                    </li>
-                    <li>Built-in objects, including Math, are collections of methods and properties that JavaScript
-                        provides.</li>
-                    <br>
-
-                    <li><a href="https://www.codecademy.com/resources/docs/javascript">Codecademy Docs: JavaScript</a>
-                    </li>
-                    <li><a href="https://www.codecademy.com/workspaces/new">Codecademy Workspaces: JavaScript</a></li>
-
-
-                    <p>// set the value of kelvin
-                        const kelvin = 293;
-
-                        // comment that
-                        const celsius = kelvin - 273;
-
-                        // comment voila
-                        let fahrenheit = celsius * (9 / 5) + 32;
-
-                        // cooodd
-                        fahrenheit = Math.floor(fahrenheit);
-
-                        console.log(`The temperature is ${fahrenheit} degrees Fahrenheit`);</p>
-
-
-                    <p>let userName = 'Sylvain';
-                        userName ? console.log(`Hello, ${userName}!`) : console.log('Hello!');
-
-                        const userQuestion = 'Will I get lucky ?';
-
-                        console.log(`${userName} asked ${userQuestion}`);
-
-                        let randomNumber = Math.floor(Math.random() * 8);
-
-                        let eightBall = '';
-
-                        switch (randomNumber) {
-                        case 1:
-                        eightBall = 'It is certain';
-                        break;
-                        case 2:
-                        eightBall = 'It is decidedly so';
-                        break;
-                        case 3:
-                        eightBall = 'Reply hazy try again';
-                        break;
-                        case 4:
-                        eightBall = 'Cannot predict now';
-                        break;
-                        case 5:
-                        eightBall = 'Do not count on it';
-                        break;
-                        case 6:
-                        eightBall = 'My sources say no';
-                        break;
-                        case 7:
-                        eightBall = 'Outlook not so good';
-                        break;
-                        case 8:
-                        eightBall = 'Signs point to yes';
-                        break;
-                        }
-
-                        console.log(`The answer is ${eightBall}`);</p>
-
-
-                    <p>let raceNumber = Math.floor(Math.random() * 1000);
-
-                        const registeredEarly = false;
-                        const runnerAge = 18;
-
-                        if (runnerAge > 18 && registeredEarly) {
-                        raceNumber += 1000;
-                        }
-
-                        if (runnerAge > 18 && registeredEarly) {
-                        console.log(`You will start à 9:30am. your number is ${raceNumber}`);
-                        } else if (runnerAge > 18 && !registeredEarly){
-                        console.log(`You will start à 11:00am. your number is ${raceNumber}`);
-                        } else if (runnerAge < 18){ console.log(`You will start à 12:30am. your number is
-                            ${raceNumber}`); } else if (runnerAge==18){ console.log(`Please go check the registration
-                            desk`); } </p>
-
-                            <p>// Write your code below
-                                let bobsFollowers = ['pierre', 'manu', 'axel','adrien'];
-
-                                let tinasFollowers = ['Céline', 'manu', 'axel'];
-
-                                let mutualFollowers = [];
-
-                                for (let i= 0; i < bobsFollowers.length; i++){ for (let j=0; j < tinasFollowers.length;
-                                    j++){ if (bobsFollowers[i]===tinasFollowers[j]) {
-                                    mutualFollowers.push(bobsFollowers[i]); } } } console.log(mutualFollowers)</p>
-                                    <p>
-                                        // Write your code below
-                                        let cupsOfSugarNeeded = 30;
-                                        let cupsAdded = 0;
-
-                                        do {
-                                        cupsAdded ++;
-                                        console.log(cupsAdded);
-                                        } while (cupsAdded < cupsOfSugarNeeded); </p>
-                </ul>
-
+                    <input class="button" type="button" value="Jouer">
+                    <p class="displayPlayer">Le joueur 1 joue : <span id="displayResult1"></span></p>
+                    <p class="displayPlayer">Le joueur 2 joue : <span id="displayResult2"></span></p>
+                    <p class="displayResult" id="displayWinner"></p>
             </div>
         </main>
     </div>
+    <script src="../scripts/test1.js"></script>
 </body>
 
 </html>
