@@ -57,34 +57,38 @@ function removeComa(secretMessage) {
 
 function execution(secretMessage) {
 
+    // Afficher le message secret avant transformation
+    document.getElementById("initialMessage").innerHTML = secretMessage;
+
     // Utiliser une méthode pour enlever le dernier éléments du tableau `secretMessage`.
     let messageUpdated = removeLastWord(secretMessage);
-    console.log(`Suppression du dernier mot :${messageUpdated}`);
+    document.getElementById("deleteLastWord").innerHTML = messageUpdated;
 
     //  Utiliser une méthode pour ajouter les mots 'to' and 'program' comme des éléments distincts à la fin du tableau.
     messageUpdated = addWordAtTheEnd(messageUpdated);
-    console.log(`Ajout de mots à la fin :${messageUpdated}`);
+    document.getElementById("addWords").innerHTML = messageUpdated;
 
     // Changer le mot 'easily' par 'right' en accédant au bon index du tableau.
     let str = replaceWord(secretMessage);
     messageUpdated = removeComa(str);
-    console.log(`Remplace le mot easily par right :${messageUpdated}`);
+    document.getElementById("replaceWord").innerHTML = messageUpdated;
 
     // Utiliser une méthode pour supprimer le premier éléments du tableau.
     messageUpdated = removeFirstWord(secretMessage);
-    console.log(`La phrase sans le premier mot :${messageUpdated}`);
+    document.getElementById("deleteFirstWord").innerHTML = messageUpdated;
 
     // Utiliser une méthode pour ajouter la chaine "Programming" en début de tableau.
     messageUpdated = addFirstWord(secretMessage);
-    console.log(`La phrase avec un nouveau premier mot :${messageUpdated}`);
+    document.getElementById("addFirstWord").innerHTML = messageUpdated;
+
 
     // Utiliser une méthode pour remplacer les mots 'get', 'right', 'the', 'first', 'time' par 'know'.
     messageUpdated = replaceWords(secretMessage);
-    console.log(`La phrase avec de nouveaux mots :${messageUpdated}`);
+    document.getElementById("replaceWords").innerHTML = messageUpdated;
 
     // Utiliser la méthode `.join` pour afficher le message secret à la console.
     messageUpdated = removeComa(secretMessage);
-    console.log(`La phrase initiale est : ${messageUpdated}`);
+    document.getElementById("joinArray").innerHTML = messageUpdated;
 };
 
 // Lancement de la fonction
