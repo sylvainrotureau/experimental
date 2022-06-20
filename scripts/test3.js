@@ -1,10 +1,12 @@
 
+
 function removeComa(phrase) {
     let phraseprompt = phrase.join(" ");
+    console.log(phraseprompt);
     return phraseprompt;
 }
 
-function checkWord(phrase) {
+function checkWord(phrase, wordToReplace) {
     let checkWord = phrase.indexOf(wordToReplace);
     if (!checkWord) {
         let errorMessage = "Ce mot n'est pas présent dans la phrase";
@@ -14,16 +16,13 @@ function checkWord(phrase) {
     }
 };
 
-function replaceWord(phrase) {
+function replaceWord(phrase, wordToWrite, wordToReplace) {
     let numeroIndex = phrase.indexOf(wordToReplace);
     phrase[numeroIndex] = wordToWrite;
 };
 
-let phrase = ["Le", "train", "de", "injures", "roulent", "sur", "les", "rails", "de", "mon", "indifférence", "et", "n'atteindra", "jamais", "la", "gare", "de", "mon", "estime"];
-let wordToReplace = prompt(`Quel mot de cette phrase voulez-vous remplacer ? ${phraseprompt}`);
+let phrase = ["bonjour","ca","va"];
+let wordToReplace = prompt(`Quel mot de cette phrase voulez-vous remplacer ? ${removeComa(phrase)}`);
 
-
-removeComa(phrase);
-checkWord(phrase);
-replaceWord(phrase);
-console.log(phrase.join(" "));
+checkWord(phrase, wordToReplace);
+replaceWord(phrase, wordToWrite, wordToReplace);
